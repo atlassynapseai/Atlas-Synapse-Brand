@@ -1,0 +1,56 @@
+COMPONENTS & PAGES INVENTORY
+=============================
+
+PAGES (app directory):
+./app/page.tsx - Home page: Hero section with logo formation, mission, problem, offerings, products, capabilities, where we fit
+./app/about/page.tsx - About page: Company mission, vision, and team information
+./app/contact/page.tsx - Contact page: Full contact form with file uploads, phone, email validation, Supabase integration
+./app/risks/page.tsx - Risks page: AI governance risks content
+./app/security/page.tsx - Security page: Security and trust information
+./app/solutions/page.tsx - Solutions page: Platform solutions and trust simulator
+./app/platform/page.tsx - Platform page: Redirects to solutions
+./app/portal/page.tsx - Portal page: Redirects to contact
+./app/layout.tsx - Root layout: Metadata, fonts (Inter, Space Grotesk), background wrapper, motion provider
+
+CORE COMPONENTS:
+./components/Navbar.tsx - Main navigation header with logo, nav links, login/demo buttons, mobile menu
+./components/MotionProvider.tsx - Framer Motion context provider for animations
+./components/AnimatedBackgroundWrapper.tsx - Wrapper for animated background effects
+./components/AnimatedBackground.tsx - Background animation layer with web pulse and streaks
+
+HOME PAGE COMPONENTS (./components/home/):
+./components/home/HomeHero.tsx - Hero section with main headline and CTA
+./components/home/HeroOrb.tsx - 3D orb animation element in hero
+./components/home/HeroShieldBox.tsx - Shield/security visual element
+./components/home/HomeMission.tsx - Mission statement section
+./components/home/HomeMissionVision.tsx - Combined mission and vision section
+./components/home/HomeProblem.tsx - Problem statement section
+./components/home/HomeProblemBlast.tsx - Problem breakdown with visual blast effect
+./components/home/HomeCapabilities.tsx - Core capabilities showcase
+./components/home/HomeOffering.tsx - Product offering section
+./components/home/HomeProducts.tsx - Product details section
+./components/home/HomeIndustries.tsx - Industries served section
+./components/home/HomeCTA.tsx - Call-to-action section
+./components/home/HomeWhereWeFit.tsx - Market positioning section
+
+SPECIALIZED COMPONENTS:
+./components/HeroWithLogoFormation.tsx - Hero with animated logo formation
+./components/OfferingsModule.tsx - Reusable offerings display module
+./components/ProblemPanels.tsx - Problem statement panels with visuals
+./components/SecurityTrustSection.tsx - Security and trust messaging section
+./components/TrustFitVisualizer.tsx - Trust fit visualization component
+./components/PulseDockJump.tsx - Animated pulse dock animation
+./components/FinalCTA.tsx - Final call-to-action section
+
+SECTION-SPECIFIC COMPONENTS:
+./components/about/AboutPageClient.tsx - Client wrapper for about page
+./components/about/AboutContent.tsx - About page content component
+./components/risks/RisksContent.tsx - Risks page content
+./components/security/SecurityContent.tsx - Security page content
+./components/solutions/SolutionsTrustSimulator.tsx - Trust simulator tool
+./components/platform/PlatformContent.tsx - Platform redirects content
+./components/portal/PortalExperience.tsx - Portal experience content
+./components/contact/ContactContent.tsx - Contact form with validation, file uploads, Supabase & email integration
+
+UTILITY FILES:
+./lib/motion.ts - Framer Motion import/export wrapper

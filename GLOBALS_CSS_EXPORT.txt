@@ -1,0 +1,237 @@
+=== GLOBALS CSS (START) ===
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  /* Design system: spacing scale (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  /* Typography (clamp-based) — larger to fill whitespace */
+  --text-hero: clamp(3rem, 8vw + 2rem, 6rem);
+  --text-display: clamp(2rem, 4vw + 1rem, 3.25rem);
+  --text-h2: clamp(1.75rem, 2.5vw + 0.75rem, 2.5rem);
+  --text-body: clamp(1rem, 0.5vw + 0.9rem, 1.125rem);
+  --text-small: clamp(0.875rem, 0.25vw + 0.8rem, 0.9375rem);
+  /* Radii */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  /* Glass */
+  --glass-bg: rgba(15, 23, 42, 0.75);
+  --glass-border: rgba(148, 163, 184, 0.2);
+  --blur-panel: 20px;
+}
+
+html,
+body {
+  @apply text-slate-100;
+}
+
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+main {
+  @apply relative;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--blur-panel));
+  -webkit-backdrop-filter: blur(var(--blur-panel));
+}
+
+.sheen-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.sheen-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.26) 35%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+}
+
+.sheen-button:hover::after {
+  transition: transform 600ms ease-out;
+  transform: translateX(120%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Animated background — web + streaks (always visible) */
+@keyframes web-pulse {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+@keyframes streak {
+  0% { transform: translateX(-100%) rotate(var(--streak-rotate, -15deg)); }
+  100% { transform: translateX(100vw) rotate(var(--streak-rotate, -15deg)); }
+}
+.animate-web-pulse {
+  animation: web-pulse 4s ease-in-out infinite;
+}
+.animate-streak {
+  animation: streak 18s linear infinite;
+}
+
+/* Section visual hierarchy: thin top cap + heading accent only (no panes, stars stay visible) */
+[data-section] {
+  position: relative;
+}
+/* Thin gradient line at top of section only */
+[data-section="hero"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.35) 20%, rgba(168, 85, 247, 0.2) 50%, rgba(168, 85, 247, 0.35) 80%, transparent 100%);
+  pointer-events: none;
+}
+[data-section="about"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(120, 120, 240, 0.3) 20%, rgba(120, 120, 240, 0.15) 50%, rgba(120, 120, 240, 0.3) 80%, transparent 100%);
+  pointer-events: none;
+}
+[data-section="risks"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(200, 100, 255, 0.3) 20%, rgba(200, 100, 255, 0.15) 50%, rgba(200, 100, 255, 0.3) 80%, transparent 100%);
+  pointer-events: none;
+}
+[data-section="solutions"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.35) 20%, rgba(56, 189, 248, 0.2) 50%, rgba(56, 189, 248, 0.35) 80%, transparent 100%);
+  pointer-events: none;
+}
+[data-section="contact"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(72, 160, 245, 0.3) 20%, rgba(72, 160, 245, 0.15) 50%, rgba(72, 160, 245, 0.3) 80%, transparent 100%);
+  pointer-events: none;
+}
+[data-section="mission"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(140, 90, 240, 0.3) 20%, rgba(140, 90, 240, 0.15) 50%, rgba(140, 90, 240, 0.3) 80%, transparent 100%);
+  pointer-events: none;
+}
+[data-section="problem"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(248, 113, 113, 0.3) 20%, rgba(248, 113, 113, 0.15) 50%, rgba(248, 113, 113, 0.3) 80%, transparent 100%);
+  pointer-events: none;
+}
+[data-section="offering"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.35) 20%, rgba(56, 189, 248, 0.2) 50%, rgba(56, 189, 248, 0.35) 80%, transparent 100%);
+  pointer-events: none;
+}
+[data-section="cta"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(72, 160, 245, 0.35) 20%, rgba(72, 160, 245, 0.2) 50%, rgba(72, 160, 245, 0.35) 80%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Small accent on section main heading (not a full bar) */
+.section-title {
+  position: relative;
+  padding-left: 14px;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.12em;
+  bottom: 0.12em;
+  width: 3px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+[data-section="hero"] .section-title::before { background: rgba(168, 85, 247, 0.5); }
+[data-section="mission"] .section-title::before { background: rgba(140, 90, 240, 0.45); }
+[data-section="problem"] .section-title::before { background: rgba(248, 113, 113, 0.45); }
+[data-section="offering"] .section-title::before { background: rgba(56, 189, 248, 0.5); }
+[data-section="cta"] .section-title::before { background: rgba(72, 160, 245, 0.5); }
+[data-section="about"] .section-title::before { background: rgba(120, 120, 240, 0.45); }
+[data-section="risks"] .section-title::before { background: rgba(200, 100, 255, 0.45); }
+[data-section="solutions"] .section-title::before { background: rgba(56, 189, 248, 0.5); }
+[data-section="contact"] .section-title::before { background: rgba(72, 160, 245, 0.45); }
+
+/* Tetris Atlas shine */
+@keyframes atlas-shine {
+  to { background-position: 200% center; }
+}
+
+=== GLOBALS CSS (END) ===

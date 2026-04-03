@@ -1,0 +1,66 @@
+=== TAILWIND CONFIG (START) ===
+
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  darkMode: "class",
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}"
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-space-grotesk)", "system-ui", "sans-serif"]
+      },
+      fontSize: {
+        "hero": ["var(--text-hero)", { lineHeight: "1.1" }],
+        "display": ["var(--text-display)", { lineHeight: "1.15" }],
+        "h2": ["var(--text-h2)", { lineHeight: "1.25" }],
+        "body": ["var(--text-body)", { lineHeight: "1.6" }],
+        "small": ["var(--text-small)", { lineHeight: "1.5" }]
+      },
+      spacing: {
+        "18": "4.5rem",
+        "22": "5.5rem",
+        "30": "7.5rem"
+      },
+      borderRadius: {
+        "atlas-sm": "var(--radius-sm)",
+        "atlas-md": "var(--radius-md)",
+        "atlas-lg": "var(--radius-lg)",
+        "atlas-xl": "var(--radius-xl)",
+        "atlas-2xl": "var(--radius-2xl)"
+      },
+      colors: {
+        "atlas-bg": "#050816",
+        "atlas-surface": "#050b18",
+        "atlas-elevated": "#0b1020",
+        "atlas-border": "rgba(148, 163, 184, 0.35)",
+        "atlas-soft": "rgba(15,23,42,0.8)",
+        "atlas-primary": "#a855f7",
+        "atlas-primary-soft": "rgba(168, 85, 247, 0.35)",
+        "atlas-secondary": "#38bdf8",
+        "atlas-accent": "#e5e7eb",
+        "atlas-danger": "#f97373",
+        "atlas-success": "#34d399"
+      },
+      boxShadow: {
+        "atlas-soft": "0 18px 45px rgba(15,23,42,0.85)",
+        "atlas-glow": "0 0 40px rgba(168,85,247,0.4)",
+        "atlas-glow-sm": "0 0 20px rgba(168,85,247,0.3)",
+        "atlas-border-glow": "0 0 0 1px rgba(148,163,184,0.4)"
+      },
+      backgroundImage: {
+        "atlas-radial":
+          "radial-gradient(circle at top, rgba(168,85,247,0.22), transparent 60%), radial-gradient(circle at bottom, rgba(56,189,248,0.18), transparent 65%)"
+      }
+    }
+  },
+  plugins: []
+};
+
+export default config;
+
+=== TAILWIND CONFIG (END) ===

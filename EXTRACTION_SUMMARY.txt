@@ -1,0 +1,154 @@
+--- EXTRACTION SUMMARY ---
+
+EXTRACTION COMPLETE - Atlas Synapse Brand Page Design System
+=============================================================
+
+FILES CREATED FOR INTEGRATION:
+[✓] TAILWIND_CONFIG_EXPORT.txt - tailwind.config.ts complete content
+[✓] GLOBALS_CSS_EXPORT.txt - globals.css complete content
+[✓] PACKAGE_JSON_EXPORT.txt - package.json complete content
+[✓] NEXT_CONFIG_EXPORT.txt - next.config.mjs complete content
+[✓] COMPONENTS_INVENTORY.txt - list of all 31 components and pages with descriptions
+[✓] LAYOUT_EXPORT.txt - root layout.tsx file content
+[✓] NAVBAR_EXPORT.txt - Navbar.tsx component content
+[✓] ASSETS_INVENTORY.txt - list of public assets (logo.png)
+[✓] EXTRACTION_SUMMARY.txt - this file
+
+
+FRAMEWORK & TECH STACK:
+- Framework: Next.js 14.2.35 ✓
+- React: 18.2.0 ✓
+- TypeScript: Yes ✓
+- CSS Framework: Tailwind CSS 3.4.1 ✓
+- Animation Library: Framer Motion 11.0.8 ✓
+- Icon Library: Lucide React 0.575.0 ✓
+- Email Service: Nodemailer 8.0.4 ✓
+- Form Validation: Custom client-side + Supabase backend ✓
+
+CURRENT DEPLOYMENT:
+- Deployed on: Vercel ✓
+- Current URL: https://www.atlassynapseai.com/Atlas-Synapse-Brand
+- basePath: '/Atlas-Synapse-Brand' (configured in next.config.mjs)
+- assetPrefix: '/Atlas-Synapse-Brand' (for static assets)
+
+
+DESIGN SYSTEM ELEMENTS PRESERVED:
+
+COLOR PALETTE (100% INTACT):
+- atlas-bg: #050816 (dark background)
+- atlas-surface: #050b18
+- atlas-elevated: #0b1020
+- atlas-primary: #a855f7 (purple)
+- atlas-secondary: #38bdf8 (cyan)
+- atlas-accent: #e5e7eb
+- atlas-danger: #f97373
+- atlas-success: #34d399
+- Plus soft variants and shadow definitions
+
+TYPOGRAPHY (100% INTACT):
+- Font families: Inter (sans), Space_Grotesk (display)
+- Responsive sizes: hero, display, h2, body, small (all clamp-based)
+- Line heights: optimized for readability (1.1 - 1.6)
+
+SPACING SCALE (100% INTACT):
+- CSS custom properties: --space-1 through --space-32 (4px base)
+- Tailwind extensions: 18px, 22px, 30px custom spacing
+
+BORDER RADIUS (100% INTACT):
+- atlas-sm: 0.5rem
+- atlas-md: 0.75rem
+- atlas-lg: 1rem
+- atlas-xl: 1.25rem
+- atlas-2xl: 1.5rem
+
+ANIMATIONS (100% INTACT):
+- web-pulse: 4s ease-in-out infinite (opacity)
+- streak: 18s linear infinite (background streaks)
+- atlas-shine: smooth background position animation
+- Framer Motion transitions preserved in all components
+
+GLASS MORPHISM EFFECTS (100% INTACT):
+- glass-panel: backdrop blur (20px), semi-transparent background
+- sheen-button: gradient shine effect on hover
+
+SECTION STYLING (100% INTACT):
+- Thin gradient top borders for each section type
+- Section-specific color accents (purple, cyan, etc.)
+- Small accent bars on section titles (3px width)
+
+RESPONSIVE BREAKPOINTS (100% INTACT):
+- sm: 640px
+- md: 768px
+- lg: 1024px
+- Tailwind default breakpoints maintained
+
+
+COMPONENT ARCHITECTURE:
+
+Total Components: 31 (+ 8 app pages)
+
+Core Infrastructure:
+- MotionProvider: Wraps app for Framer Motion context
+- AnimatedBackgroundWrapper: Background animation layer
+- Navbar: Main navigation (responsive, sticky)
+
+Page Structure (Next.js App Router):
+- Root layout with Google Fonts
+- 8 content pages (home, about, contact, risks, solutions, security, platform, portal)
+
+Visual Components:
+- Hero with logo formation and animated orbs
+- Mission/Vision sections
+- Problem statement panels
+- Offerings and products showcase
+- Trust simulator visualization
+- Industries served
+- Final CTA sections
+
+Feature Components:
+- Contact form (validated, file uploads, Supabase + email)
+- Security/trust sections
+- Pulse dock animations
+
+All components use:
+- Tailwind CSS for styling
+- Framer Motion for animations
+- Next.js Image component (optimized)
+- Custom CSS for glass effects and animations
+
+
+INTEGRATION NOTES FOR ATLAS-SYNAPSE-HOMEPAGE:
+
+To integrate into the main homepage:
+
+1. DESIGN SYSTEM: Entire Tailwind config, CSS variables, and color palette are ready to merge
+2. COMPONENTS: All 31 components can be imported as-is (just copy /components directory)
+3. FONTS: Add Google Fonts to root layout (Inter, Space_Grotesk)
+4. CSS: Merge globals.css - all section styling and animations included
+5. NAVBAR: Use the Navbar component directly - includes responsive design and animations
+6. CONTACT FORM: ContactContent.tsx has full Supabase + email integration ready
+7. BASEPATH: Remove basePath/assetPrefix from next.config if merging into main domain
+
+
+KEY FILES MODIFIED IN BRAND PAGE:
+- app/api/contact/route.ts - Contact form backend (Supabase + Nodemailer)
+- components/contact/ContactContent.tsx - Complete contact form rewrite (validation, files, phone)
+- All other files: UNCHANGED from original Markus design
+
+
+DEPENDENCIES TO ADD (if not already present in homepage):
+- framer-motion: ^11.0.8
+- lucide-react: ^0.575.0
+- nodemailer: ^8.0.4 (for contact form email)
+- @types/nodemailer: ^7.0.11 (TypeScript types)
+
+
+INSTRUCTIONS FOLLOWED:
+✓ Did NOT modify any files during extraction
+✓ Did NOT run npm build/deploy
+✓ Did NOT delete anything
+✓ Extracted complete files with full content
+✓ Preserved all animations, colors, fonts exactly as designed
+✓ Markus's design system: FULLY INTACT - ZERO MODIFICATIONS
+
+--- END EXTRACTION SUMMARY ---

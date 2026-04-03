@@ -1,0 +1,4 @@
+PUBLIC ASSETS INVENTORY
+=======================
+
+public/logo.png - Brand logo (32x32px, PNG format, used in navbar and favicon)
